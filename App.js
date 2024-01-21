@@ -48,7 +48,7 @@ connectPassport();
 app.use('/app', userRouter);
 app.use('/app', orderRouter);
 app.use("/",(req,res)=>{
-    res.send(`<h1>${PORT}hello</h1>`)
+    res.send(`<h1>${PORT} ${process.env.MONGO_URL}hello</h1>`)
 })
 
 // Default route
