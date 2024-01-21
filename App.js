@@ -17,7 +17,6 @@ dotenv.config({
 });
 
 const app = express();
-
 // Middleware
 app.use(cookieParser());
 app.use(express.json());
