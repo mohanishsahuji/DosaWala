@@ -12,10 +12,6 @@ import bodyParser from 'body-parser';
 import Razorpay from 'razorpay'
 import cors from 'cors'
 
-dotenv.config({
-    path: './config/config.env',
-});
-
 const app = express();
 // Middleware
 app.use(cookieParser());
