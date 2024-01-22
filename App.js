@@ -44,9 +44,9 @@ connectPassport();
 app.use('/app', userRouter);
 app.use('/app', orderRouter);
 
-const mongo=typeof process.env.MONGO_URL
+const mongo=typeof process.env.MONGI_URL
 app.use("/",(req,res)=>{
-    res.send(`<h1>${PORT} ${mongo}hello</h1>`)
+    res.send(`<h1>${PORT} ${mongo} ${process.env.MONGI_URL}hello</h1>`)
 })
 
 // Default route
@@ -57,8 +57,9 @@ export const instance = new Razorpay({ key_id: process.env.RAZORPAY_ID, key_secr
 // MongoDB Connection
 async function main() {
     try {
-        await mongoose.connect("mongodb://mohanishsahu780:PfEYvmZZJJQDWBWL@ac-xb7emyf-shard-00-00.wyqwb3r.mongodb.net:27017,ac-xb7emyf-shard-00-01.wyqwb3r.mongodb.net:27017,ac-xb7emyf-shard-00-02.wyqwb3r.mongodb.net:27017/?ssl=true&replicaSet=atlas-3l4zuh-shard-0&authSource=admin&retryWrites=true&w=majority");
-        console.log(`Database connected  at${process.env.MONGO_URL}`);
+        // await mongoose.connect("mongodb://mohanishsahu780:PfEYvmZZJJQDWBWL@ac-xb7emyf-shard-00-00.wyqwb3r.mongodb.net:27017,ac-xb7emyf-shard-00-01.wyqwb3r.mongodb.net:27017,ac-xb7emyf-shard-00-02.wyqwb3r.mongodb.net:27017/?ssl=true&replicaSet=atlas-3l4zuh-shard-0&authSource=admin&retryWrites=true&w=majority");
+        await mongoose.connect(process.env.MONGI_URL);
+        console.log(`Database connected  at${process.env.MONGI_URL}`);
     } catch (error) {
         console.error('Error connecting to the database:', error);
     }
