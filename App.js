@@ -65,7 +65,7 @@ main().catch((err) => console.log(err));
 async function main() {
     try {
         // await mongoose.connect("mongodb://mohanishsahu780:PfEYvmZZJJQDWBWL@ac-xb7emyf-shard-00-00.wyqwb3r.mongodb.net:27017,ac-xb7emyf-shard-00-01.wyqwb3r.mongodb.net:27017,ac-xb7emyf-shard-00-02.wyqwb3r.mongodb.net:27017/?ssl=true&replicaSet=atlas-3l4zuh-shard-0&authSource=admin&retryWrites=true&w=majority");
-        await mongoose.connect(MONGODB);
+        await mongoose.connect("mongodb+srv://mohanishsahu780:PfEYvmZZJJQDWBWL@cluster0.yfjkhb4.mongodb.net/test?retryWrites=true");
         console.log(`Database connected  at${process.env.MONGI_URL}`);
     } catch (error) {
         console.error('Error connecting to the database:', error);
