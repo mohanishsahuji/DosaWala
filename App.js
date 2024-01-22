@@ -44,6 +44,9 @@ connectPassport();
 app.use('/app', userRouter);
 app.use('/app', orderRouter);
 
+
+const MONGODB=process.env.MONGI_URL || "GAndu h kya re"
+
 const mongo=typeof MONGODB
 app.use("/",(req,res)=>{
     res.send(`<h1>${PORT} ${mongo} ${MONGODB}hello</h1>`)
@@ -56,7 +59,7 @@ export const instance = new Razorpay({ key_id: process.env.RAZORPAY_ID, key_secr
 
 // MongoDB Connection
 
-const MONGODB=process.env.MONGI_URL || "GAndu h kya re"
+
 
 main().catch((err) => console.log(err));
 async function main() {
