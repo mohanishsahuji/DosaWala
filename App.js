@@ -43,8 +43,10 @@ connectPassport();
 // Routers
 app.use('/app', userRouter);
 app.use('/app', orderRouter);
+
+const mongo=typeof process.env.MONGO_URL
 app.use("/",(req,res)=>{
-    res.send(`<h1>${PORT} ${process.env.MONGO_URL}hello</h1>`)
+    res.send(`<h1>${PORT} ${mongo}hello</h1>`)
 })
 
 // Default route
