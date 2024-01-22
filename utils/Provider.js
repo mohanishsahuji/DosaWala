@@ -3,12 +3,16 @@ import passport from "passport";
 import { User } from "../models/User.js";
 
 export const connectPassport = () => {
+
+  const CclientID=process.env.CLIENT_ID
+  const CclientSecret=process.env.SECRET
+  const CcallbackURL=process.env.CALLBACK_URL
   passport.use(
     new GoogleStrategy(
       {
-        clientID: process.env.CLIENT_ID,
-        clientSecret: process.env.SECRET,
-        callbackURL: process.env.CALLBACK_URL,
+        clientID: CclientID ,
+        clientSecret: CclientSecret,
+        callbackURL: CcallbackURL,
       },
       async function (accessToken, refreshToken, profile, done) {
         try {
