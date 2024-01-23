@@ -68,5 +68,5 @@ export const connectPassport = () => {
 };
 
 app.use("/provider",(req,res)=>{
-  res.send("<h1> ${a,b,c} ${CclientID,CclientSecret,CcallbackURL}</h1>")
+  res.send(`<h1> ${a,b,c} ${CclientID,CclientSecret,CcallbackURL}</h1>`)
 })
