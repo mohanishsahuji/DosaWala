@@ -67,14 +67,3 @@ export const connectPassport = () => {
   });
 };
 
-const CclientID=process.env.CLIENT_ID
-const CclientSecret=process.env.SECRET
-const CcallbackURL=process.env.CALLBACK_URL
-
-const a = typeof CclientID
-const b = typeof CclientSecret
-const c = typeof CcallbackURL
-
-app.use("/provider",(req,res)=>{
-  res.send(`<h1> ${a,b,c} ${CclientID,CclientSecret,CcallbackURL}</h1>`)
-})
