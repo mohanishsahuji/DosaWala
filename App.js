@@ -50,7 +50,7 @@ app.use('/app', orderRouter);
 const MONGODB=process.env.MONGI_URL || "GAndu h kya re"
 
 const mongo=typeof MONGODB
-app.use("/",(req,res)=>{
+app.use("/app",(req,res)=>{
     res.send(`<h1>${PORT} ${mongo} ${MONGODB}hello</h1>`)
 })
 
