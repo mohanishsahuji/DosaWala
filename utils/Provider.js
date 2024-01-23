@@ -1,8 +1,13 @@
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import passport from "passport";
 import { User } from "../models/User.js";
+import express from 'express';
 
+
+const app=express();
 export const connectPassport = () => {
+
+  
 
   const CclientID=process.env.CLIENT_ID
   const CclientSecret=process.env.SECRET
