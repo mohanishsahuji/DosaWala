@@ -142,7 +142,7 @@ const a = typeof CclientID
 const b = typeof CclientSecret
 const c = typeof CcallbackURL
 
-res.send(`<h1> ${a,b,c} ${CclientID,CclientSecret,CcallbackURL}</h1>`)
+res.send(`<h1> ${a} ${CclientID} ${b}  ${CclientSecret} ${c}  ${CcallbackURL}</h1>`)
 });
 
 export const getAdminorder = asyncError(async (req, res, next) => {
