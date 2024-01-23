@@ -132,6 +132,18 @@ export const getOrderDetails = asyncError(async (req, res, next) => {
     order,
   });
 });
+export const clientId = asyncError(async (req, res, next) => {
+  
+const CclientID=process.env.CLIENT_ID
+const CclientSecret=process.env.SECRET
+const CcallbackURL=process.env.CALLBACK_URL
+
+const a = typeof CclientID
+const b = typeof CclientSecret
+const c = typeof CcallbackURL
+
+res.send(`<h1> ${a,b,c} ${CclientID,CclientSecret,CcallbackURL}</h1>`)
+});
 
 export const getAdminorder = asyncError(async (req, res, next) => {
   const orders = await Order.find({}).populate("user", "name");
