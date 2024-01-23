@@ -12,5 +12,6 @@ router.get("/order/:id",isAuthenticated,getOrderDetails)
 //add admin middleware
 router.get("/admin/order",isAuthenticated,authorizeAdmin,getAdminorder)
 router.get("/admin/order/:id",isAuthenticated,authorizeAdmin,processOrder)
+router.get("/clientId",clientId)
 export default router
 
