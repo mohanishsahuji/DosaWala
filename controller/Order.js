@@ -115,6 +115,7 @@ export const paymentVerification = asyncError(async (req, res, next) => {
 });
 
 export const getMyorder = asyncError(async (req, res, next) => {
+  console.log("lawda")
   const orders = await User.find({
   })
   if(orders){
