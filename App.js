@@ -53,6 +53,9 @@ const mongo=typeof MONGODB
 app.use("/app",(req,res)=>{
     res.send(`<h1>${PORT} ${mongo} ${MONGODB}hello</h1>`)
 })
+app.use("/",(req,res)=>{
+    res.send(`<h1>${PORT}</h1>`)
+})
 
 // Default route
 
