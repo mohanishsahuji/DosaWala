@@ -13,6 +13,8 @@ import Razorpay from 'razorpay'
 import cors from 'cors'
 
 const app = express();
+
+dotenv.config();
 // Middleware
 app.use(cookieParser());
 app.use(express.json());
