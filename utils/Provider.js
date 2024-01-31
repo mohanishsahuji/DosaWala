@@ -9,13 +9,10 @@ export const connectPassport = () => {
 
   
 
-  const CclientID=process.env.CLIENT_ID
-  const CclientSecret=process.env.SECRET
-  const CcallbackURL=process.env.CALLBACK_URL
+export const CclientID=process.env.CLIENT_ID
+export const CclientSecret=process.env.SECRET
+export const CcallbackURL=process.env.CALLBACK_URL
 
-  const a = typeof CclientID
-  const b = typeof CclientSecret
-  const c = typeof CcallbackURL
   
   passport.use(
     new GoogleStrategy(
