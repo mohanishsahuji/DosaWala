@@ -46,7 +46,7 @@ connectPassport();
 app.use('/app', userRouter);
 app.use('/app', orderRouter);
 
-
+const PORT = process.env.PORT || 3000;
 const MONGODB=process.env.MONGI_URL || "GAndu h kya re"
 
 const mongo=typeof MONGODB
@@ -77,7 +77,7 @@ async function main() {
 }
 
 
-const PORT = process.env.PORT || 3000;
+
 
 app.listen(PORT, () => {
     console.log(`Server started at http://localhost:${PORT}`,`in ${process.env.NODE_ENV}`);
