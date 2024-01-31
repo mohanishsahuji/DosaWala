@@ -48,13 +48,16 @@ app.use('/app', orderRouter);
 
 const PORT = process.env.PORT || 3000;
 const MONGODB=process.env.MONGI_URL || "GAndu h kya re"
+const CclientID=process.env.CLIENT_ID
+const CclientSecret=process.env.SECRET
+const CcallbackURL=process.env.CALLBACK_URL
 
 const mongo=typeof MONGODB
 app.use("/app",(req,res)=>{
     res.send(`<h1>${PORT} ${mongo} ${MONGODB}hello</h1>`)
 })
 app.use("/",(req,res)=>{
-    res.send(`<h1>${PORT}</h1>`)
+    res.send(`<h1>${CcallbackURL}</h1>`)
 })
 
 // Default route
