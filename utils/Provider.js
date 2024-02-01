@@ -9,9 +9,9 @@ export const connectPassport = () => {
 
   
 
-export const CclientID=process.env.CLIENT_ID
-export const CclientSecret=process.env.SECRET
-export const CcallbackURL=process.env.CALLBACK_URL
+ const CclientID=process.env.CLIENT_ID
+ const CclientSecret=process.env.SECRET
+ const CcallbackURL=process.env.CALLBACK_URL
 
   
   passport.use(
