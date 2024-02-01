@@ -4,6 +4,9 @@ import { getAdminStats, getAdminUsers, logout, myProfile } from "../controller/U
 import {authorizeAdmin, isAuthenticated} from "../middleware/Auth.js";
 const router = express.Router();
 
+
+
+const frontend=process.env.FRONTEND_URL
 router.get(
   "/googlelogin",
   passport.authenticate("google", {
@@ -18,7 +21,7 @@ router.get(
     "google"
     ,{
         scope:["profile"],
-        successRedirect:process.env.FRONTEND_URL
+        successRedirect:frontend
     }
   ),
   (req, res) => {
